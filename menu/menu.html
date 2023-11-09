@@ -1,0 +1,906 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>MEDINA BURGER - Fast Food!</title>
+        <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/icons/all.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <link href="../img/hero-banner.png" rel="icon">
+    <link href="../img/hero-banner.png" rel="apple-touch-icoun">
+
+        <!--
+        Favicon
+    -->
+    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+            <!-- Icon Font Stylesheet -->
+            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    
+            <!-- Libraries Stylesheet -->
+            <link href="../lib/animate/animate.min.css" rel="stylesheet">
+            <link href="../lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+            <link href="../lib/owlcarousel/owl.carousel.min.css" rel="stylesheet">
+
+    <!--
+        Google Fonts
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100;8..144,300;8..144,400;8..144,500;8..144,600;8..144,700&family=Roboto+Mono:wght@100;200;300;400;500;700&family=Rubik+Dirt&family=Rubik:wght@300;400;500;600;700;800;900&family=Shadows+Into+Light&display=swap"
+          rel="stylesheet">
+    <!-- Font Awesome CDN-->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+          rel="stylesheet" />
+    <!--
+        Custom Css Style Link
+    -->
+
+</head>
+
+<body>
+
+            <!-- Navbar start -->
+            <div class="container-fluid nav-bar">
+                <div class="container">
+                    <nav class="navbar navbar-light navbar-expand-lg py-4">
+                        <a href="../index.html" class="navbar-brand">
+                           <img src="../img/logo6.jpg" alt="">
+                        </a>
+                        <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                            <span class="fa fa-bars text-primary"></span>
+                        </button>
+                        <div class="collapse navbar-collapse main-nav" id="navbarCollapse">
+                            <div class="navbar-nav mx-auto">
+                                <div class="nav-item dropdown dropi">
+                                    <div class="dropdown-menu bg-light .mega-menu">
+                                        <ul class="links">
+                                            <li>
+                                              <a href="#"><img src="../img/break.png" alt="">Breakfast</a>
+                                            </li>
+                                            <li>
+                                              <a href="#"><img src="../img/hamburger.png" alt="">Burgers</a>
+                                            </li>
+                                            <li>
+                                              <a href="#"><img src="../img/sandwich.png" alt="">Sandwiches</a>
+                                            </li>
+                                            <li>
+                                              <a href="#"><img src="../img/nuggets.png" alt="">Nuggets</a>
+                                            </li>
+                                            
+                                          </ul>
+                                          <ul class="links">
+                                            <!----  <li>
+                                                <a href="#testimonials"><i class="fas fa-percent fa-fw"></i> Testimonials</a>
+                                              </li>
+                                            <li>
+                                                <a href="#video"><i class="far fa-play-circle fa-fw"></i> Top Videos</a>
+                                              </li>
+                                            -->
+                                              <li>
+                                                <a href="#"><img src="../img/fried-potatoes.png" alt="">Fries</a>
+                                              </li>
+                                              <li>
+                                                <a href="#"><img src="../img/soft-drink.png" alt="">Drinks</a>
+                                              </li>
+                                              <li>
+                                                <a href="#"><img src="../img/donut.png" alt="">Sweets</a>
+                                              </li>
+                                              <li>
+                                                <a href="#"><img src="../img/cocoa.png" alt="">Hot drinks</a>
+                                              </li>
+                                            </ul>
+                                            <ul class="button">
+                                                <!-- HTML !-->
+                                            <button class="button-30" role="button"><a href="#" style="color: var(--main-color);">View Full Menu</a></button>
+                                            </ul>
+                                    </div>
+                                </div>
+                                <a href="../index.html" class="nav-item nav-link">Home</a>
+                                <a href="about.html" class="nav-item nav-link">Exclusive Deals</a>
+                                <a href="service.html" class="nav-item nav-link">About our food</a>
+                                <a href="event.html" class="nav-item nav-link">Location</a>
+                                <div class="nav-item dropdown">
+                                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><img src="img/du.jpg" alt="" style="width: 2rem;"> DU</a>
+                                    <div class="dropdown-menu bg-light">
+                                        <a href="du.html" class="dropdown-item"><img src="img/uk.jpg" alt="" style="width: 2rem;"> English</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="btn-search btn btn-primary btn-md-square me-4 rounded-circle d-none d-lg-inline-flex" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fas fa-search"></i></button>
+                            <button class="btn btn-primary py-2 px-4 d-none d-xl-inline-block rounded-pill" data-bs-toggle="modal" data-bs-target="#orderModal">Order Now</button>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            <!-- Navbar End -->
+
+                    <!-- Modal Search Start -->
+        <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Search by keyword</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body d-flex align-items-center">
+                        <div class="input-group w-75 mx-auto d-flex">
+                            <input type="search" class="form-control bg-transparent p-3" placeholder="keywords" aria-describedby="search-icon-1">
+                            <span id="search-icon-1" class="input-group-text p-3"><i class="fa fa-search"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Search End -->
+
+         <!-- Modal order now Start -->
+         <div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Order now by using one of our Delivery options</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body d-flex align-items-center">
+                        <div class="input-group w-75 mx-auto d-flex">
+                            <ul class="checkme">
+                                <li>
+                                  <input type="checkbox" id="myCheckbox1" value="1" name="fooby[1][]" required/>
+                                  <label for="myCheckbox1"> <img src="../img/logo.png" alt=""></label>
+                                </li>
+                                <li>
+                              
+                                  <input type="checkbox" id="myCheckbox2" value="1" name="fooby[1][]" required/>
+                                  <label for="myCheckbox2"> <img src="../img/delv1.png" alt=""></label>
+                                </li>
+                                <li>
+                              
+                                    <input type="checkbox" id="myCheckbox3" value="1" name="fooby[1][]" required/>
+                                    <label for="myCheckbox3"> <img src="../img/delv3.png" alt=""></label>
+                                  </li>
+                              </ul>
+                        </div>
+                        <button class="btn btn-primary py-2 px-4 d-none d-xl-inline-block rounded-pill btn-option"  data-bs-dismiss="modal" style="background-color: rgb(242, 242, 242); margin-right: 15px;">Cancel</button>
+                        <button type="submit" class="btn btn-primary py-2 px-4 d-none d-xl-inline-block rounded-pill btn-option" data-bs-toggle="modal">Continue</button> &nbsp;&nbsp;
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal order now End -->
+    <div class="containerr">
+
+
+
+
+
+        <!-- Left Side Navbar -->
+
+        <nav class="side-nav">
+            <ul class="nav-links">
+                <li><a href="#" class="nav-item" data-target="new"><img src="img/products/new.png" alt="">New Features</a></li>
+                <li><a href="#" class="nav-item" data-target="burger"><img src="img/products/beef.png" alt="">Beef burgers</a></li>
+                <li><a href="#" class="nav-item" data-target="chicken"><img src="img/products/chicken.png" alt="">Chicken burgers</a></li>
+                <li><a href="#" class="nav-item" data-target="fish"><img src="img/products/fish.png" alt="">Fish burgers</a></li>
+                <li><a href="#" class="nav-item" data-target="chickfingers"><img src="img/products/chickfingers.png" alt="">Fried chickens</a></li>
+                <li><a href="#" class="nav-item" data-target="nuggets"><img src="img/products/nuggets.png" alt="">Sides</a></li>
+                <li><a href="#" class="nav-item" data-target="fries"><img src="img/products/fries.png" alt="">Fries</a></li>
+                <li><a href="#" class="nav-item" data-target="shawarma"><img src="img/products/shawarma.png" alt="">Wraps</a></li>
+                <li><a href="#" class="nav-item" data-target="salade"><img src="img/products/salade.png" alt="">Salade & Veggie</a></li>
+                <li><a href="#" class="nav-item" data-target="kids"><img src="img/products/kids.png" alt="">Kids</a></li>
+                <li><a href="#" class="nav-item" data-target="sauces"><img src="img/products/sauces.png" alt="">Sauces</a></li>
+                <li><a href="#" class="nav-item" data-target="juice"><img src="img/products/juice.png" alt="">Drinks</a></li>
+                <li><a href="#" class="nav-item" data-target="milkshake"><img src="img/products/milkshake.png" alt="">Milkshake</a></li>
+                <li><a href="#" class="nav-item" data-target="dessert"><img src="img/products/dessert.png" alt="">Dessert</a></li>
+            </ul>
+        </nav>
+        
+        <!-- End Left Side Navbar -->
+
+        <!-- Right Body -->
+        <div class="main-body">
+            <!-- Main Menu -->
+            <div class="main-menu">
+                <div class="menu-page show-up" id="burger">
+                    <!-- Category -->
+                    <div class="category">
+                        <ul class="nav-links category">
+                            <li><a href="javascript:void(0)" id="all-burg" class="nav-item active">All</a></li>
+                            <li><a href="javascript:void(0)" id="bacon-burg" class="nav-item">Bacon</a></li>
+                            <li><a href="javascript:void(0)" id="beef-burg" class="nav-item">Beef</a></li>
+                            <li><a href="javascript:void(0)" id="chesee-burg" class="nav-item">Cheese</a></li>
+                            <li><a href="javascript:void(0)" id="chicken-burg" class="nav-item">Deluxe</a></li>
+                            <li><a href="javascript:void(0)" id="chicken-burg" class="nav-item">Hamburger</a></li>
+                            <li><a href="javascript:void(0)" id="chicken-burg" class="nav-item">Spicy</a></li>
+                            <li><a href="javascript:void(0)" id="chicken-burg" class="nav-item">Gourmet</a></li>
+                            <li><a href="javascript:void(0)" id="chicken-burg" class="nav-item">Chicken</a></li>
+                            <li><a href="javascript:void(0)" id="chicken-burg" class="nav-item">Fish</a></li>
+                        </ul>
+                    </div>
+                    <!-- End Category -->
+                    <!-- Menu items -->
+                    <div class="menus">
+                        <h6 class="classy"><a href="../index.html"><i class="fa-solid fa-arrow-left"></i> Back to home</a></h6>
+                        <div class="menu burger" data-menu="beef-burg">
+                            <img src="img/burger/beef-2.png" alt="beef">
+                            <h2 class="price">$4.7</h2>
+                            <div class="desc-item">
+                                <h3>Beef burger 2</h3>
+                                <p>special burger with beef hot sausage</p>
+                            </div>
+                        </div>
+                        <div class="menu burger" data-menu="beef-burg">
+                            <img src="img/burger/beef-3.png" alt="beef">
+                            <h2 class="price">$4</h2>
+                            <div class="desc-item">
+                                <h3>beef burger 3</h3>
+                                <p>special burger with beef hot sausage</p>
+                            </div>
+                            
+                        </div>
+                        <div class="menu burger" data-menu="beef-burg">
+                            <img src="img/burger/beef.png" alt="beef">
+                            <h2 class="price">$5.9</h2>
+                            <div class="desc-item">
+                                <h3>beef burger</h3>
+                                <p>special burger with beef hot sausage</p>
+                            </div>
+                            
+                        </div>
+                        <div class="menu burger" data-menu="beef-burg">
+                            <img src="img/burger/beef-4.png" alt="beef">
+                            <h2 class="price">$4.9</h2>
+                            <div class="desc-item">
+                                <h3>beef burger 4</h3>
+                                <p>special burger with beef hot sausage</p>
+                            </div>
+                            
+                        </div>
+                        <div class="menu burger" data-menu="bacon-burg">
+                            <img src="img/burger/bacon.png" alt="beef">
+                            <h2 class="price">$7.9</h2>
+                            <div class="desc-item">
+                                <h3>xtra bacon special</h3>
+                                <p>special burger with double big beef & bacon</p>
+                            </div>
+                            
+                        </div>
+                        <div class="menu burger" data-menu="bacon-burg">
+                            <img src="img/burger/bacon-2.png" alt="beef">
+                            <h2 class="price">$4.9</h2>
+                            <div class="desc-item">
+                                <h3>bacon burger cheese</h3>
+                                <p>special burger with beef bacon & cheese</p>
+                            </div>
+                            
+                        </div>
+                        <div class="menu burger" data-menu="bacon-burg">
+                            <img src="img/burger/bacon-3.png" alt="beef">
+                            <h2 class="price">$4.9</h2>
+                            <div class="desc-item">
+                                <h3>bacon burger</h3>
+                                <p>special burger with beef bacon & cheese</p>
+                            </div>
+                            
+                        </div>
+                        <div class="menu burger" data-menu="chesee-burg">
+                            <img src="img/burger/cheeseburger.png" alt="chesee">
+                            <h2 class="price">$4.8</h2>
+                            <div class="desc-item">
+                                <h3>cheese burger</h3>
+                                <p>special cheese burger with xtra cheese</p>
+                            </div>
+                            
+                        </div>
+                        <div class="menu burger" data-menu="chesee-burg">
+                            <img src="img/burger/cheeseburger-2.png" alt="chesee">
+                            <h2 class="price">$5.3</h2>
+                            <div class="desc-item">
+                                <h3>cheese burger 2</h3>
+                                <p>special cheese burger with xtra cheese</p>
+                            </div>
+                            
+                        </div>
+                        <div class="menu burger" data-menu="chesee-burg">
+                            <img src="img/burger/cheeseburger-3.png" alt="chesee">
+                            <h2 class="price">$4.9</h2>
+                            <div class="desc-item">
+                                <h3>cheese burger 3</h3>
+                                <p>special cheese burger with xtra cheese</p>
+                            </div>
+                            
+                        </div>
+                        <div class="menu burger" data-menu="chicken-burg">
+                            <img src="img/burger/double-chicken.png" alt="chicken">
+                            <h2 class="price">$5</h2>
+                            <div class="desc-item">
+                                <h3>chicken burger</h3>
+                                <p>special burger with chicken meat</p>
+                            </div>
+                            
+                        </div>
+                        <div class="menu burger" data-menu="chicken-burg">
+                            <img src="img/burger/double-chicken-2.png" alt="chicken">
+                            <h2 class="price">$4.8</h2>
+                            <div class="desc-item">
+                                <h3>chicken burger 2</h3>
+                                <p>special burger with chicken meat</p>
+                            </div>
+                            
+                        </div>
+                        <div class="menu burger" data-menu="chicken-burg">
+                            <img src="img/burger/hawaii-chicken.png" alt="chicken">
+                            <h2 class="price">$4.5</h2>
+                            <div class="desc-item">
+                                <h3>Hawaii chicken burger</h3>
+                                <p>special burger with chicken meat</p>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <!-- End Menu Items -->
+                </div>
+                <div class="menu-page" id="chicken">
+                    <!-- Category -->
+                    <div class="category">
+                        <ul class="nav-links category">
+                            <li><a href="javascript:void(0)" id="all-chk" class="nav-item active">All</a></li>
+                            <li><a href="javascript:void(0)" id="deluxe-chk" class="nav-item">Deluxe</a></li>
+                            <li><a href="javascript:void(0)" id="box-chk" class="nav-item">Paket Box</a></li>
+                            <li><a href="javascript:void(0)" id="combo-chk" class="nav-item">Combo Bucket</a></li>
+                        </ul>
+                    </div>
+                    <!-- End Category -->
+                    <!-- Menu items -->
+                    <div class="menus">
+                        <div class="menu chicken" data-menu="deluxe-chk">
+                            <img src="img/chicken/deluxe-1.png" alt="thighs">
+                            <h2 class="price">$5.2</h2>
+                            <div class="desc-item">
+                                <h3>Chicken deluxe</h3>
+                                <p>paket special deluxe paha ayam </p>
+                            </div>
+                            
+                        </div>
+                        <div class="menu chicken" data-menu="deluxe-chk">
+                            <img src="img/chicken/deluxe-2.png" alt="thighs">
+                            <h2 class="price">$6.3</h2>
+                            <div class="desc-item">
+                                <h3>Chicken deluxe 2</h3>
+                                <p>paket special deluxe daging ayam lebar</p>
+                            </div>
+                            
+                        </div>
+                        <div class="menu chicken" data-menu="deluxe-chk">
+                            <img src="img/chicken/deluxe-3.png" alt="thighs">
+                            <h2 class="price">$6.2</h2>
+                            <div class="desc-item">
+                                <h3>Chicken deluxe 3</h3>
+                                <p>paket special deluxe daging ayam panjang </p>
+                            </div>
+                            
+                        </div>
+
+                        <div class="menu chicken" data-menu="combo-chk">
+                            <img src="img/chicken/combo-1.png" alt="combo">
+                            <h2 class="price">$12.5</h2>
+                            <div class="desc-item">
+                                <h3>Paket Bucket 1</h3>
+                                <p>special bucket ayam dengan porsi kuli</p>
+                            </div>
+                            
+                        </div>
+                        <div class="menu chicken" data-menu="combo-chk">
+                            <img src="img/chicken/combo-2.png" alt="combo">
+                            <h2 class="price">$12</h2>
+                            <div class="desc-item">
+                                <h3>Paket Bucket 2</h3>
+                                <p>special bucket ayam dengan porsi kuli</p>
+                            </div>
+                            
+                        </div>
+                        <div class="menu chicken" data-menu="combo-chk">
+                            <img src="img/chicken/combo-3.png" alt="combo">
+                            <h2 class="price">$15.3</h2>
+                            <div class="desc-item">
+                                <h3>Paket Bucket 3</h3>
+                                <p>special bucket ayam dengan porsi kuli</p>
+                            </div>
+                            
+                        </div>
+                        <div class="menu chicken" data-menu="box-chk">
+                            <img src="img/chicken/box-1.png" alt="box">
+                            <h2 class="price">$8</h2>
+                            <div class="desc-item">
+                                <h3>Roller Box</h3>
+                                <p>special menu kebab ayam + pepsi</p>
+                            </div>
+                            
+                        </div>
+                        <div class="menu chicken" data-menu="box-chk">
+                            <img src="img/chicken/box-2.png" alt="box">
+                            <h2 class="price">$8</h2>
+                            <div class="desc-item">
+                                <h3>Twister Box</h3>
+                                <p>special menu kebab ayam + pepsi</p>
+                            </div>
+                            
+                        </div>
+                        <div class="menu chicken" data-menu="box-chk">
+                            <img src="img/chicken/box-3.png" alt="box">
+                            <h2 class="price">$8</h2>
+                            <div class="desc-item">
+                                <h3>signature Box</h3>
+                                <p>special menu burger Chicken + pepsi</p>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <!-- End Menu Items -->
+                </div>
+                <div class="menu-page" id="fries">
+                    <!-- Category -->
+                    <div class="category">
+                        <ul class="nav-links category">
+                            <li><a href="javascript:void(0)" id="all-fr" class="nav-item active">All</a></li>
+                            <li><a href="javascript:void(0)" id="original-fr" class="nav-item">Original</a></li>
+                            <li><a href="javascript:void(0)" id="cheese-fr" class="nav-item">Cheese</a></li>
+                            <li><a href="javascript:void(0)" id="hot-fr" class="nav-item">Spicy</a></li>
+                            <li><a href="javascript:void(0)" id="chips-fr" class="nav-item">Chips</a></li>
+                        </ul>
+                    </div>
+                    <!-- End Category -->
+                    <!-- Menu items -->
+                    <div class="menus">
+                        <div class="menu fries" data-menu="original-fr">
+                            <img src="img/fries/fries-2.png" alt="original">
+                            <h2 class="price">$8.2</h2>
+                            <div class="desc-item">
+                                <h3>French fries KFC</h3>
+                                <p>KFC kentang goreng crispy original </p>
+                            </div>
+                            
+                        </div>
+                        <div class="menu fries" data-menu="original-fr">
+                            <img src="img/fries/fries-1.png" alt="original">
+                            <h2 class="price">$8.2</h2>
+                            <div class="desc-item">
+                                <h3>French fries KFC</h3>
+                                <p>KFC kentang goreng crispy special </p>
+                            </div>
+                            
+                        </div>
+                        <div class="menu fries" data-menu="original-fr">
+                            <img src="img/fries/fries-3.png" alt="original">
+                            <h2 class="price">$8.2</h2>
+                            <div class="desc-item">
+                                <h3>French fries original</h3>
+                                <p>kentang goreng crispy original </p>
+                            </div>
+                            
+                        </div>
+                        <div class="menu fries" data-menu="original-fr">
+                            <img src="img/fries/fries-4.png" alt="original">
+                            <h2 class="price">$12.5</h2>
+                            <div class="desc-item">
+                                <h3>French fries original</h3>
+                                <p>kentang goreng crispy original </p>
+                            </div>
+                            
+                        </div>
+                        <div class="menu fries" data-menu="hot-fr">
+                            <img src="img/fries/hot-fries.png" alt="hot">
+                            <h2 class="price">$12.5</h2>
+                            <div class="desc-item">
+                                <h3>Hot Spicy fries</h3>
+                                <p>kentang goreng pedas crispy </p>
+                            </div>
+                            
+                        </div>
+                        <div class="menu fries" data-menu="cheese-fr">
+                            <img src="img/fries/cheese-fries.png-2.png" alt="cheese">
+                            <h2 class="price">$10</h2>
+                            <div class="desc-item">
+                                <h3>cheese fries </h3>
+                                <p>kentang goreng dengan topping keju </p>
+                            </div>
+                            
+                        </div>
+                        <div class="menu fries" data-menu="cheese-fr">
+                            <img src="img/fries/cheese-fries.png" alt="cheese">
+                            <h2 class="price">$12</h2>
+                            <div class="desc-item">
+                                <h3>cheese fries 2</h3>
+                                <p>kentang goreng pedas dengan topping keju </p>
+                            </div>
+                            
+                        </div>
+                        <div class="menu fries" data-menu="chips-fr">
+                            <img src="img/fries/chips-1.png" alt="chips">
+                            <h2 class="price">$15</h2>
+                            <div class="desc-item">
+                                <h3>Chips bowl</h3>
+                                <p>keripik kentang goreng dengan original </p>
+                            </div>
+                            
+                        </div>
+                        <div class="menu fries" data-menu="chips-fr">
+                            <img src="img/fries/chips-2.png" alt="chips">
+                            <h2 class="price">$9.3</h2>
+                            <div class="desc-item">
+                                <h3>Hot Chips bowl</h3>
+                                <p>keripik kentang goreng dengan rasa pedas </p>
+                            </div>
+                            
+                        </div>
+                        <div class="menu fries" data-menu="chips-fr">
+                            <img src="img/fries/chips-3.png" alt="chips">
+                            <h2 class="price">$9.3</h2>
+                            <div class="desc-item">
+                                <h3>Barbeque Chips bowl</h3>
+                                <p>keripik kentang goreng dengan taburan bumbu barbeque </p>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <!-- End Menu Items -->
+                </div>
+                <div class="menu-page" id="pizza">
+                    <!-- Category -->
+                    <div class="category">
+                        <ul class="nav-links category">
+                            <li><a href="javascript:void(0)" id="all-piz" class="nav-item active">All</a></li>
+                            <li><a href="javascript:void(0)" id="original-piz" class="nav-item">Original</a></li>
+                            <li><a href="javascript:void(0)" id="beef-piz" class="nav-item">Daging</a></li>
+                            <li><a href="javascript:void(0)" id="hot-piz" class="nav-item">Spicy</a></li>
+                            <li><a href="javascript:void(0)" id="salad-piz" class="nav-item">Salad</a></li>
+                        </ul>
+                    </div>
+                    <!-- End Category -->
+                    <!-- Menu items -->
+                    <div class="menus">
+                        <div class="menu pizza" data-menu="original-piz">
+                            <img src="img/pizza/pepperoni-pizza.png" alt="pepperoni">
+                            <h2 class="price">$8.2</h2>
+                            <div class="desc-item">
+                                <h3>pepperoni pizza</h3>
+                                <p>Special dengan topping peperoni ayam</p>
+                            </div>
+                            
+                        </div>
+                        <div class="menu pizza" data-menu="original-piz">
+                            <img src="img/pizza/pizza-1.png" alt="original">
+                            <h2 class="price">$8.2</h2>
+                            <div class="desc-item">
+                                <h3>pepperoni pizza with extra cheese</h3>
+                                <p>Special dengan topping peperoni ayam + xtra keju</p>
+                            </div>
+                            
+                        </div>
+                        <div class="menu pizza" data-menu="salad-piz">
+                            <img src="img/pizza/pizza-2.png" alt="original">
+                            <h2 class="price">$8.2</h2>
+                            <div class="desc-item">
+                                <h3>Tomato pizza</h3>
+                                <p>Special dengan topping tomat & cabai</p>
+                            </div>
+                            
+                        </div>
+                        <div class="menu pizza" data-menu="beef-piz">
+                            <img src="img/pizza/pizza-3.png" alt="original">
+                            <h2 class="price">$12.5</h2>
+                            <div class="desc-item">
+                                <h3>Pizza Beef</h3>
+                                <p>Special dengan xtra topping daging sapi</p>
+                            </div>
+                            
+                        </div>
+                        <div class="menu pizza" data-menu="hot-piz">
+                            <img src="img/pizza/pizza-4.png" alt="hot">
+                            <h2 class="price">$12.5</h2>
+                            <div class="desc-item">
+                                <h3>Hot Spicy Pizza</h3>
+                                <p>Special dengan topping sayur & cabai</p>
+                            </div>
+                            
+                        </div>
+                        <div class="menu pizza" data-menu="salad-piz">
+                            <img src="img/pizza/pizza-5.png" alt="cheese">
+                            <h2 class="price">$10</h2>
+                            <div class="desc-item">
+                                <h3>Salad Pizza</h3>
+                                <p>Special dengan topping sayur & daging</p>
+                            </div>
+                            
+                        </div>
+                        <div class="menu pizza" data-menu="beef-piz">
+                            <img src="img/pizza/pizza-6.png" alt="cheese">
+                            <h2 class="price">$12</h2>
+                            <div class="desc-item">
+                                <h3>Combo Pizza</h3>
+                                <p>Special dengan campuran topping sayur & daging</p>
+                            </div>
+                            
+                        </div>
+                        <div class="menu pizza" data-menu="salad-piz">
+                            <img src="img/pizza/pizza-7.png" alt="chips">
+                            <h2 class="price">$15</h2>
+                            <div class="desc-item">
+                                <h3>Mushroom Pizza</h3>
+                                <p>Special dengan campuran topping sayur & jamur </p>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <!-- End Menu Items -->
+                </div>
+                <div class="menu-page" id="drink">
+                    <!-- Category -->
+                    <div class="category">
+                        <ul class="nav-links category">
+                            <li><a href="javascript:void(0)" id="all-dri" class="nav-item active">All</a></li>
+                            <li><a href="javascript:void(0)" id="cocacola-dri" class="nav-item">Coca Cola</a></li>
+                        </ul>
+                    </div>
+                    <!-- End Category -->
+                    <!-- Menu items -->
+                    <div class="menus">
+                        <div class="menu drink" data-menu="cocacola-dri">
+                            <img src="img/drink/coca-cola.png" alt="coca cola">
+                            <h2 class="price">$2.5</h2>
+                            <div class="desc-item">
+                                <h3>Coca cola drink</h3>
+                                <p>minuman segar bersoda </p>
+                            </div>
+                            
+                        </div>
+
+                    </div>
+                    <!-- End Menu Items -->
+                </div>
+            </div>
+            <!-- End Main Menu -->
+
+            <!-- Checkout Detail -->
+ 
+            <!-- End Checkout Detail -->
+        </div>
+    </div>
+    <div class="after">
+        <div class="mb-5">
+            <div class="square">
+                <h1><img src="../img/logo7.png" alt=""> Burgers :</h1>
+                <div class="display-tot">
+                <div class="display-ff">
+                <div class="ev-rep">
+                    <img src="img/burger/bacon-2.png" alt="">
+                    <h4>Thon Burger</h4>
+                </div>
+                <div class="ev-rep">
+                    <img src="img/burger/bacon.png" alt="">
+                    <h4>Thon Burger</h4>
+                </div>
+                <div class="ev-rep">
+                    <img src="img/burger/beef-2.png" alt="">
+                    <h4>Thon Burger</h4>
+                </div>
+                <div class="ev-rep">
+                    <img src="img/burger/beef-3.png" alt="">
+                    <h4>Thon Burger</h4>
+                </div>
+                <div class="ev-rep">
+                    <img src="img/burger/beef-4.png" alt="">
+                    <h4>Thon Burger</h4>
+                </div>
+                <div class="ev-rep">
+                    <img src="img/burger/beef.png" alt="">
+                    <h4>Thon Burger</h4>
+                </div>
+                </div>
+                <div class="display-fr">
+                    <div class="ev-rep">
+                        <img src="img/burger/bacon-2.png" alt="">
+                        <h4>Thon Burger</h4>
+                        </div>
+                    <div class="ev-rep">
+                        <img src="img/burger/bacon.png" alt="">
+                        <h4>Thon Burger</h4>
+                        </div>
+                    <div class="ev-rep">
+                        <img src="img/burger/beef-2.png" alt="">
+                        <h4>Thon Burger</h4>
+                        </div>
+                    <div class="ev-rep">
+                        <img src="img/burger/beef-3.png" alt="">
+                        <h4>Thon Burger</h4>
+                        </div>
+                    <div class="ev-rep">
+                        <img src="img/burger/beef-4.png" alt="">
+                        <h4>Thon Burger</h4>
+                        </div>
+                    <div class="ev-rep">
+                        <img src="img/burger/beef.png" alt="">
+                        <h4>Thon Burger</h4>
+                        </div>
+                 </div>
+                </div>
+                <h1>Fries :</h1>
+                <div class="display-tot">
+                    <div class="display-ff">
+                    <div class="ev-rep">
+                        <img src="img/fries/chips-1.png" alt="">
+                        <h4>Fries Hot</h4>
+                        </div>
+                    <div class="ev-rep">
+                        <img src="img/fries/chips-2.png" alt="">
+                        <h4>Fries Hot</h4>
+                        </div>
+                    <div class="ev-rep">
+                        <img src="img/fries/chips-3.png" alt="">
+                        <h4>Fries Hot</h4>
+                        </div>
+                    </div>
+                    <div class="display-fr">
+                        <div class="ev-rep">
+                            <img src="img/fries/fries-1.png" alt="">
+                            <h4>Fries Hot</h4>
+                                </div>
+                        <div class="ev-rep">
+                            <img src="img/fries/fries-3.png" alt="">
+                            <h4>Fries Hot</h4>
+                                </div>
+                        <div class="ev-rep">
+                            <img src="img/fries/fries-2.png" alt="">
+                            <h4>Fries Hot</h4>
+                                </div>
+                     </div>
+                </div>
+                <h1>Chicken :</h1>
+                <div class="display-tot">
+                    <div class="display-ff">
+                    <div class="ev-rep">
+                        <img src="img/chicken/box-1.png" alt="">
+                        <h4>Chicken spicy</h4>
+                        </div>
+                    <div class="ev-rep">
+                        <img src="img/chicken/box-2.png" alt="">
+                        <h4>Chicken spicy</h4>
+                        </div>
+                    <div class="ev-rep">
+                        <img src="img/chicken/box-3.png" alt="">
+                        <h4>Chicken spicy</h4>
+                        </div>
+                    </div>
+                    <div class="display-fr">
+                        <div class="ev-rep">
+                            <img src="img/chicken/combo-1.png" alt="">
+                            <h4>Chicken spicy</h4>
+                                </div>
+                        <div class="ev-rep">
+                            <img src="img/chicken/combo-2.png" alt="">
+                            <h4>Chicken spicy</h4>
+                                </div>
+                        <div class="ev-rep">
+                            <img src="img/chicken/combo-3.png" alt="">
+                            <h4>Chicken spicy</h4>
+                                </div>
+                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!-- Footer Start -->
+        <div class="container-fluid footer py-6 my-6 mb-0 bg-light" data-wow-delay="0.1s">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-item">
+                            <img src="../img/logo6.jpg" alt="">
+                            <p class="lh-lg mb-4">Welkom bij Medina Burger in Antwerpen! Ervaar een mix van traditie en moderniteit in onze levendige, rijke culinaire ambiance.</p>
+                            <div class="footer-icon d-flex">
+                                <a class="btn btn-primary btn-sm-square me-2 rounded-circle" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-primary btn-sm-square me-2 rounded-circle" href=""><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="btn btn-primary btn-sm-square me-2 rounded-circle"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="btn btn-primary btn-sm-square me-2 rounded-circle"><i class="fab fa-youtube"></i></a>
+                                <a href="#" class="btn btn-primary btn-sm-square rounded-circle"><i class="fa fa-phone" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-item">
+                            <h4 class="mb-4">Speciale faciliteiten</h4>
+                            <div class="d-flex flex-column align-items-start">
+                                <a class="text-body mb-3" href=""><i class="fa fa-check text-primary me-2"></i>Onze menukaart</a>
+                                <a class="text-body mb-3" href=""><i class="fa fa-check text-primary me-2"></i>exclusieve aanbiedingen</a>
+                                <a class="text-body mb-3" href=""><i class="fa fa-check text-primary me-2"></i>Over ons eten</a>
+                                <a class="text-body mb-3" href=""><i class="fa fa-check text-primary me-2"></i>Our Plaats</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-item">
+                            <h4 class="mb-4">Contacteer ons nu</h4>
+                            <div class="d-flex flex-column align-items-start">
+                                <p><i class="fa fa-map-marker-alt text-primary me-2"></i> Koningin Astridplein 11, 2018 Antwerpen, Belgium</p>
+                                <p><i class="fa fa-phone-alt text-primary me-2"></i> +32 3 234 01 11</p>
+                                <p><i class="fas fa-envelope text-primary me-2"></i> noreply@medinaburger.be</p>
+                                <p><i class="fa fa-clock text-primary me-2"></i>Maandag-Zondag :
+                                    <br>11:00 AM - 22:00 PM
+                                    
+                                    </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-item">
+                            <h4 class="mb-4">Sociale galerij</h4>
+                            <div class="row g-2">
+                                <div class="col-4">
+                                     <img src="../img/foot1.jpg" class="img-fluid rounded-circle border border-primary p-2" alt="">
+                                </div>
+                                <div class="col-4">
+                                     <img src="../img/foot2.jpg" class="img-fluid rounded-circle border border-primary p-2" alt="">
+                                </div>
+                                <div class="col-4">
+                                     <img src="../img/foot3.jpg" class="img-fluid rounded-circle border border-primary p-2" alt="">
+                                </div>
+                                <div class="col-4">
+                                     <img src="../img/foot6.jpg" class="img-fluid rounded-circle border border-primary p-2" alt="">
+                                </div>
+                                <div class="col-4">
+                                     <img src="../img/foot5.jpg" class="img-fluid rounded-circle border border-primary p-2" alt="">
+                                </div>
+                                <div class="col-4">
+                                     <img src="../img/foot4.jpg" class="img-fluid rounded-circle border border-primary p-2" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+
+    <!-- Optional JavaScript -->
+    <script src="js/icons/all.js"></script>
+    <script src="js/main.js"></script>
+        <!--
+        Custom JS Link
+    -->
+    <script src="./assets/js/scripts.js"></script>
+
+    <!--
+        Ion-icon JS Links
+    -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+            <!-- JavaScript Libraries -->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+            <script src="../lib/wow/wow.min.js"></script>
+            <script src="../lib/easing/easing.min.js"></script>
+            <script src="../lib/waypoints/waypoints.min.js"></script>
+            <script src="../lib/counterup/counterup.min.js"></script>
+            <script src="../lib/lightbox/js/lightbox.min.js"></script>
+            <script src="../lib/owlcarousel/owl.carousel.min.js"></script>
+    
+            <!-- Template Javascript -->
+            <script src="../js/main.js"></script>
+</body>
+
+</html>
