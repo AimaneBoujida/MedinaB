@@ -115,10 +115,10 @@ addCart.forEach(el => {
         btnRemv.classList.remove('btn-sm');
         btnMin.setAttribute('href', 'javascript:void(0)');
         btnPlus.setAttribute('href', 'javascript:void(0)');
-        btnMin.setAttribute('onClick', 'btnMinusOrder(event)');
-        btnPlus.setAttribute('onClick', 'btnPlusOrder(event)');
-        btnRemv.setAttribute('href', 'javascript:void(0)');
-        btnRemv.setAttribute('onClick', 'btnRemoveOrder(event)');
+        btnMin.setAttribute('onClick', 'btnMinusOrder(event); decrementSpan();');
+        btnPlus.setAttribute('onClick', 'btnPlusOrder(event); incrementSpan();');
+        btnRemv.setAttribute('href', 'javascript:void(0); deleteProduct();');
+        btnRemv.setAttribute('onClick', 'btnRemoveOrder(event); removeAllOrders(); resetRandomSpans();');
         orderTittle.setAttribute('style', 'margin-bottom:10px');
         imgOrder.setAttribute('src', img_Item);
 
@@ -150,10 +150,10 @@ addCart.forEach(el => {
 
         listOrder.prepend(divOrder);
 
-        e.target.firstChild.data = '';
-        e.target.append(icCheck);
-        e.target.classList.add('active');
-        checkOutPrint();
+        // e.target.firstChild.data = '';
+        // e.target.append(icCheck);
+        // e.target.classList.add('active');
+        // checkOutPrint();
     });
 });
 
@@ -175,13 +175,29 @@ const btnMinusOrder = (event) => {
     let count = event.target.nextElementSibling.firstChild.data;
     count = parseInt(count);
 
-    if (count > 1) {
+    if (count > 0) {
         count = count - 1;
     }
     countText.innerHTML = count;
     checkOutPrint();
+
     // console.log(count);
+    if (count === 0) {
+    // If count is zero, remove the parent container
+    const orderContainer = event.target.closest('.order-item'); // Adjust the selector accordingly
+    if (orderContainer) {
+        orderContainer.remove();
+    }
 }
+}
+
+
+// console.log(count);
+
+
+
+
+
 
 const btnRemoveOrder = (event) => {
     const removeOrder = event.target.parentElement.parentElement.parentElement;
@@ -309,3 +325,199 @@ const makeElement = (element, count) => {
     return arr;
 }
 
+
+
+//////////////////////////////////////////////////////////
+
+// var div = document.getElementById('beshow');
+// var display = 0;
+
+// function hideShoww() {
+//     if (display == 1){
+//         div.style.display = 'block';
+//         display  = 0;
+//     }
+//     else {
+//         div.style.display = 'none';
+//         display = 1;
+//     }
+// }
+
+
+// Select increment and decrement buttons
+const incrementCount = document.getElementById("increment-count");
+const decrementCount = document.getElementById("decrement-count");
+
+// Select total count
+const totalCount = document.getElementById("total-count");
+
+// Variable to track count
+var count = 0;
+
+// Display initial count value
+totalCount.innerHTML = count;
+
+// Function to increment count
+const handleIncrement = () => {
+  count++;
+  totalCount.innerHTML = count;
+};
+
+// Function to decrement count
+const handleDecrement = () => {
+  if (count > 0) {
+    count--;
+  }
+  totalCount.innerHTML = count;
+};
+
+// Add click event to buttons
+incrementCount.addEventListener("click", handleIncrement);
+decrementCount.addEventListener("click", handleDecrement);
+
+/////////////////////////////////////////////////////////////////
+var a = 1;
+
+function show_hide() {
+    var element = document.getElementById("beshow");
+
+    if (a == 1) {
+        element.style.display = "inline";
+        a = 0;
+
+        // Set a timer to hide the element after 40 seconds (40000 milliseconds)
+        setTimeout(function() {
+            element.style.display = "none";
+            a = 1;
+        }, 40000); // Adjust the duration as needed
+    } else {
+        element.style.display = "none";
+        a = 1;
+    }
+}
+
+
+///////////////////////////////////////////////////////////////////////
+
+function bounceImage() {
+    const bouncingImage = document.getElementById('bouncingImage');
+    
+    // Add a class to apply the bounce animation
+    bouncingImage.classList.add('bounceAnimation');
+
+    // Remove the bounce animation class after the animation ends
+    bouncingImage.addEventListener('animationend', () => {
+        bouncingImage.classList.remove('bounceAnimation');
+    });
+}
+
+////////////////////////////////////////////////////////////////////
+
+function removeAllOrders() {
+    var ordersContainer = document.getElementById("orders");
+
+    // Remove all child elements (orders) from the ordersContainer
+    while (ordersContainer.firstChild) {
+        ordersContainer.removeChild(ordersContainer.firstChild);
+    }
+}
+
+///////////////////////////////////////////////////////////////
+// function incrementSpan() {
+//     var counterSpan = document.getElementById("counter");
+
+//     // Get the current value and increment it
+//     var currentValue = parseInt(counterSpan.innerHTML);
+//     var newValue = currentValue + 1;
+
+//     // Update the span with the new value
+//     counterSpan.innerHTML = newValue;
+// }
+// function decrementSpan() {
+//     var counterSpan = document.getElementById("counter");
+//     var currentValue = parseInt(counterSpan.innerHTML);
+
+//     // Check if the current value is greater than 0 before decrementing
+//     var newValue = currentValue > 0 ? currentValue - 1 : 0;
+
+//     counterSpan.innerHTML = newValue;
+// }
+// function deleteProduct() {
+//     // Your deleteProduct function logic goes here to delete a product
+
+//     // Increment the counter for each deleted product
+//     incrementSpan();
+
+//     // Subtract a certain value from the total
+//     subtractFromTotal(5); // Adjust the value based on the price of the deleted product
+
+//     // Other logic for deleting the product
+// }
+
+// function deleteAllProducts() {
+//     // Your deleteAllProducts function logic goes here to delete all products
+
+//     // Reset the counter to zero
+//     resetCounter();
+
+//     // Other logic for deleting all products
+// }
+
+// function subtractFromTotal(value) {
+//     var counterSpan = document.getElementById("counter");
+//     var currentValue = parseInt(counterSpan.innerHTML);
+//     var newValue = currentValue >= value ? currentValue - value : 0;
+//     counterSpan.innerHTML = newValue;
+// }
+
+// function resetCounter() {
+//     var counterSpan = document.getElementById("counter");
+//     counterSpan.innerHTML = 0;
+// }
+
+/////////////////////////////////////////////////////////////
+
+function resetRandomSpans() {
+    // Array of span IDs
+    var spanIds = ["span1", "span2", "span3", "span4"];
+
+    // Iterate over each span ID and set its content to zero
+    for (var i = 0; i < spanIds.length; i++) {
+        var spanId = spanIds[i];
+        var span = document.getElementById(spanId);
+
+        // Set the content of the span to zero
+        if (span) {
+            span.innerHTML = 0;
+        }
+    }
+}
+
+//////////////////////////////////////////////////////////
+function redirectToAnotherPage() {
+    // Replace 'target_page.html' with the actual name of the HTML file you want to navigate to
+    window.location.href = '../pay.html';
+}
+
+////////////////////////////////////////////////////////////
+
+function redirectToAnotherPage() {
+    // Show loading indicator
+    document.getElementById('loading').style.display = 'block';
+
+    // Replace 'target_page.html' with the actual URL of the page you want to navigate to
+    setTimeout(function() {
+        window.location.href = '../pay.html'; // Simulating a delay, replace with your actual page URL
+    }, 2000); // Adjust the duration as needed (in milliseconds)
+}
+
+//////////////////////////////LOGIN///////////////////////
+
+const switchers = [...document.querySelectorAll('.switcher')]
+
+switchers.forEach(item => {
+	item.addEventListener('click', function() {
+		switchers.forEach(item => item.parentElement.classList.remove('is-active'))
+		this.parentElement.classList.add('is-active')
+	})
+})

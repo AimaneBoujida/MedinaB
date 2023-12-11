@@ -6,6 +6,7 @@
         <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
 
     <!-- Main CSS -->
     <link rel="stylesheet" href="css/styles.css">
@@ -50,7 +51,8 @@
 </head>
 
 <body>
-
+    
+    <div id="loading">Loading...</div>
             <!-- Navbar start -->
             <div class="container-fluid nav-bar">
                 <div class="container">
@@ -119,7 +121,8 @@
                                 </div>
                             </div>
                             <button class="btn-search btn btn-primary btn-md-square me-4 rounded-circle d-none d-lg-inline-flex" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fas fa-search"></i></button>
-                            <button class="btn btn-primary py-2 px-4 d-none d-xl-inline-block rounded-pill" data-bs-toggle="modal" data-bs-target="#orderModal">Order Now</button>
+                            <button type="button" class="btn btn-outline-warning btnLogin-popup">LOGIN</button>
+                            <!-- <button class="btn btn-primary py-2 px-4 d-none d-xl-inline-block rounded-pill" data-bs-toggle="modal" data-bs-target="#orderModal">Order Now</button> -->
                         </div>
                     </nav>
                 </div>
@@ -178,6 +181,49 @@
                 </div>
             </div>
         </div>
+        
+        <div class="shop-cart">
+           <img src="img/cart.png" alt="" onclick="show_hide()" id="bouncingImage"/>
+           <div class="total-cart" id="total-cart">
+            <span id="counter" onclick="show_hide()">$0.00</span>
+           </div>
+        </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+              var buttons = document.querySelectorAll('.increaseButton');
+              var counterElement = document.getElementById('counter');
+              var deleteOrdersButtons = document.querySelectorAll('.deleteOrdersButton');
+              var total = 0;
+          
+              buttons.forEach(function(button) {
+                button.addEventListener('click', function() {
+                  var productElement = button.parentNode;
+                  var priceElement = productElement.querySelector('.price');
+                  var price = parseFloat(priceElement.textContent);
+          
+                  // Update the total
+                  total += price;
+          
+                  // Format the total to two decimal places
+                  var formattedTotal = total.toFixed(2);
+          
+                  // Update the counter element
+                  counterElement.textContent = '$' + formattedTotal;
+                });
+              });
+          
+              // Add click event listener to all "Delete Orders" buttons
+              deleteOrdersButtons.forEach(function(deleteOrdersButton) {
+                deleteOrdersButton.addEventListener('click', function() {
+                  // Reset the total to 0
+                  total = 0;
+          
+                  // Update the counter element
+                  counterElement.textContent = '$0.00';
+                });
+              });
+            });
+          </script>
         <!-- Modal order now End -->
     <div class="containerr">
 
@@ -231,121 +277,135 @@
                     <!-- End Category -->
                     <!-- Menu items -->
                     <div class="menus">
-                        <h6 class="classy"><a href="../index.html"><i class="fa-solid fa-arrow-left"></i> Back to home</a></h6>
-                        <div class="menu burger" data-menu="beef-burg">
+                        <div class="menu burger product" data-menu="beef-burg">
                             <img src="img/burger/beef-2.png" alt="beef">
-                            <h2 class="price">$4.7</h2>
+                            <h2 class="price" id="price">4.7</h2>
                             <div class="desc-item">
                                 <h3>Beef burger 2</h3>
                                 <p>special burger with beef hot sausage</p>
                             </div>
+                            <div id="totalist"></div>
+                            <button class="increaseButton" type="button" id="bounceButton" onclick="bounceImage(); incrementSpan();">&#43;</button>
+
                         </div>
-                        <div class="menu burger" data-menu="beef-burg">
+                        <div class="menu burger product" data-menu="beef-burg">
                             <img src="img/burger/beef-3.png" alt="beef">
-                            <h2 class="price">$4</h2>
+                            <h2 class="price" id="price">4</h2>
                             <div class="desc-item">
                                 <h3>beef burger 3</h3>
                                 <p>special burger with beef hot sausage</p>
                             </div>
+                            <button class="increaseButton" type="button" id="bounceButton" onclick="bounceImage(); incrementSpan();">&#43;</button>
                             
                         </div>
-                        <div class="menu burger" data-menu="beef-burg">
+                        <div class="menu burger product" data-menu="beef-burg">
                             <img src="img/burger/beef.png" alt="beef">
-                            <h2 class="price">$5.9</h2>
+                            <h2 class="price" id="price">5.9</h2>
                             <div class="desc-item">
                                 <h3>beef burger</h3>
                                 <p>special burger with beef hot sausage</p>
                             </div>
+                            <button class="increaseButton" type="button" id="bounceButton" onclick="bounceImage(); incrementSpan();">&#43;</button>
                             
                         </div>
-                        <div class="menu burger" data-menu="beef-burg">
+                        <div class="menu burger product" data-menu="beef-burg">
                             <img src="img/burger/beef-4.png" alt="beef">
-                            <h2 class="price">$4.9</h2>
+                            <h2 class="price" id="price">4.9</h2>
                             <div class="desc-item">
                                 <h3>beef burger 4</h3>
                                 <p>special burger with beef hot sausage</p>
                             </div>
+                            <button class="increaseButton" type="button" id="bounceButton" onclick="bounceImage(); incrementSpan();">&#43;</button>
                             
                         </div>
-                        <div class="menu burger" data-menu="bacon-burg">
+                        <div class="menu burger product" data-menu="bacon-burg">
                             <img src="img/burger/bacon.png" alt="beef">
-                            <h2 class="price">$7.9</h2>
+                            <h2 class="price" id="price">7.9</h2>
                             <div class="desc-item">
                                 <h3>xtra bacon special</h3>
                                 <p>special burger with double big beef & bacon</p>
                             </div>
+                            <button class="increaseButton" type="button" id="bounceButton" onclick="bounceImage(); incrementSpan();">&#43;</button>
                             
                         </div>
-                        <div class="menu burger" data-menu="bacon-burg">
+                        <div class="menu burger product" data-menu="bacon-burg">
                             <img src="img/burger/bacon-2.png" alt="beef">
-                            <h2 class="price">$4.9</h2>
+                            <h2 class="price" id="price">4.9</h2>
                             <div class="desc-item">
                                 <h3>bacon burger cheese</h3>
                                 <p>special burger with beef bacon & cheese</p>
                             </div>
+                            <button class="increaseButton" type="button" id="bounceButton" onclick="bounceImage(); incrementSpan();">&#43;</button>
                             
                         </div>
-                        <div class="menu burger" data-menu="bacon-burg">
+                        <div class="menu burger product" data-menu="bacon-burg">
                             <img src="img/burger/bacon-3.png" alt="beef">
-                            <h2 class="price">$4.9</h2>
+                            <h2 class="price" id="price">4.9</h2>
                             <div class="desc-item">
                                 <h3>bacon burger</h3>
                                 <p>special burger with beef bacon & cheese</p>
                             </div>
+                            <button class="increaseButton" type="button" id="bounceButton" onclick="bounceImage(); incrementSpan();">&#43;</button>
                             
                         </div>
-                        <div class="menu burger" data-menu="chesee-burg">
+                        <div class="menu burger product" data-menu="chesee-burg">
                             <img src="img/burger/cheeseburger.png" alt="chesee">
-                            <h2 class="price">$4.8</h2>
+                            <h2 class="price" id="price">4.8</h2>
                             <div class="desc-item">
                                 <h3>cheese burger</h3>
                                 <p>special cheese burger with xtra cheese</p>
                             </div>
+                            <button class="increaseButton" type="button" id="bounceButton" onclick="bounceImage(); incrementSpan();">&#43;</button>
                             
                         </div>
-                        <div class="menu burger" data-menu="chesee-burg">
+                        <div class="menu burger product" data-menu="chesee-burg">
                             <img src="img/burger/cheeseburger-2.png" alt="chesee">
-                            <h2 class="price">$5.3</h2>
+                            <h2 class="price" id="price">5.3</h2>
                             <div class="desc-item">
                                 <h3>cheese burger 2</h3>
                                 <p>special cheese burger with xtra cheese</p>
                             </div>
+                            <button class="increaseButton" type="button" id="bounceButton" onclick="bounceImage(); incrementSpan();">&#43;</button>
                             
                         </div>
-                        <div class="menu burger" data-menu="chesee-burg">
+                        <div class="menu burger product" data-menu="chesee-burg">
                             <img src="img/burger/cheeseburger-3.png" alt="chesee">
-                            <h2 class="price">$4.9</h2>
+                            <h2 class="price" id="price">4.9</h2>
                             <div class="desc-item">
                                 <h3>cheese burger 3</h3>
                                 <p>special cheese burger with xtra cheese</p>
                             </div>
+                            <button class="increaseButton" type="button" id="bounceButton" onclick="bounceImage(); incrementSpan();">&#43;</button>
                             
                         </div>
-                        <div class="menu burger" data-menu="chicken-burg">
+                        <div class="menu burger product" data-menu="chicken-burg">
                             <img src="img/burger/double-chicken.png" alt="chicken">
-                            <h2 class="price">$5</h2>
+                            <h2 class="price" id="price">5</h2>
                             <div class="desc-item">
                                 <h3>chicken burger</h3>
                                 <p>special burger with chicken meat</p>
                             </div>
+                            <button class="increaseButton" type="button" id="bounceButton" onclick="bounceImage(); incrementSpan();">&#43;</button>
                             
                         </div>
-                        <div class="menu burger" data-menu="chicken-burg">
+                        <div class="menu burger product product" data-menu="chicken-burg">
                             <img src="img/burger/double-chicken-2.png" alt="chicken">
-                            <h2 class="price">$4.8</h2>
+                            <h2 class="price" id="price">4.8</h2>
                             <div class="desc-item">
                                 <h3>chicken burger 2</h3>
                                 <p>special burger with chicken meat</p>
                             </div>
+                            <button class="increaseButton" type="button" id="bounceButton" onclick="bounceImage(); incrementSpan();">&#43;</button>
                             
                         </div>
-                        <div class="menu burger" data-menu="chicken-burg">
+                        <div class="menu burger product" data-menu="chicken-burg">
                             <img src="img/burger/hawaii-chicken.png" alt="chicken">
-                            <h2 class="price">$4.5</h2>
+                            <h2 class="price" id="price">4.5</h2>
                             <div class="desc-item">
                                 <h3>Hawaii chicken burger</h3>
                                 <p>special burger with chicken meat</p>
                             </div>
+                            <button class="increaseButton" type="button" id="bounceButton" onclick="bounceImage(); incrementSpan();">&#43;</button>
                             
                         </div>
                     </div>
@@ -673,17 +733,20 @@
             <!-- End Main Menu -->
 
             <!-- Checkout Detail -->
- 
+                        <!-- Checkout Detail -->
+
             <!-- End Checkout Detail -->
         </div>
+        
     </div>
+<!-- 
     <div class="after">
         <div class="mb-5">
             <div class="square">
                 <h1><img src="../img/logo7.png" alt=""> Burgers :</h1>
                 <div class="display-tot">
                 <div class="display-ff">
-                <div class="ev-rep">
+                <div class="ev-rep" onclick="show('popupk')"> 
                     <img src="img/burger/bacon-2.png" alt="">
                     <h4>Thon Burger</h4>
                 </div>
@@ -799,8 +862,61 @@
                 </div>
             </div>
         </div>
+    </div> -->
+    <div class="popupk" id="popupk">
+        <i class="fa-solid fa-arrow-left"></i>
+        <img src="img/burger/bacon-2.png" alt="">
+        <p>lalalalalal!</p>
+        <p>Overlay uses <b>:before</b> and <b>:after</b> pseudo-classes.</p>
+        <p>Website will still remain visible behind this popup.</p>
+        <a href="#" onclick="hide('popupk')">Close</a>
+      </div>
+
+      <div class="order hidden" id="beshow">
+        <div class="order-list">
+            <h3>Order Summary</h3>
+            <hr>
+            <div class="order-inner" id="orders">
+                <div class="order-null">
+                    <i class="fas fa-clipboard-list"></i>
+                    <p>belum ada pesanan</p>
+                </div>
+            </div>
+            <hr>
+            <div class="checkout">
+                <div class="checkout-detail" id="qty">
+                    <h5><span id="span1">0</span> item(s)</h5>
+                    <h5>qty: <span id="span2">0</span></h5>
+                </div>
+                <div class="checkout-detail" id="subtotal">
+                    <h5>Subtotal</h5>
+                    <h4>$<span id="span3">0</span></h4>
+                </div>
+                <div class="checkout-detail" id="tax" data-tax="3">
+                    <h5>Tax</h5>
+                    <h4>3%</h4>
+                </div>
+                <div class="checkout-detail" id="total">
+                    <h3>Total</h3>
+                    <h3>$<span id="span4">0</span></h3>
+                </div>
+            </div>
+            <div class="checkout-detail">
+                <button type="button" class="btn-md outline deleteOrdersButton" id="bouncingImage" onclick="removeAllOrders(); deleteAllProducts(); resetRandomSpans();">Delete order</button>
+                <button type="button" class="btn-md fill" onclick="redirectToAnotherPage(); redirectToAnotherPage();">checkout</button>
+            </div>
+        </div>
     </div>
 
+    <!-- <div class="add-min">
+        <div id="increment-count">
+       <input type="image" id="up-arrow" src="img/plus.png" />
+       </div>
+       <div id="total-count"></div>
+       <div id="decrement-count">
+       <input type="image" id="down-arrow" src="img/minus.png" />
+       </div>
+       </div> -->
         <!-- Footer Start -->
         <div class="container-fluid footer py-6 my-6 mb-0 bg-light" data-wow-delay="0.1s">
             <div class="container">
@@ -873,14 +989,136 @@
         </div>
         <!-- Footer End -->
 
+           <!-- Back to Top -->
+           <a href="#" class="btn btn-md-square btn-primary rounded-circle back-to-top" style="display: block !important;"><i class="fa fa-arrow-up"></i></a>   
+
+                            <!-- LOGIN Start -->
+                            <div class="the-log">
+                                <div class="wrapper">
+                                    <span class="icon-closer" id="iconClose"><ion-icon name="close-outline"></ion-icon></span>
+                                    <div class="form-box login">
+                                        <h2>Login</h2>
+                                        <form action="#">
+                                            <div class="input-box">
+                                                <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                                                <input type="email" id="loginEmail" required>
+                                                <label>Email</label>
+                                            </div>
+                                            <div class="input-box">
+                                                <span class="icon" id="togglePassword" onclick="togglePasswordVisibility()"><ion-icon name="lock-closed"></ion-icon></span>
+                                                <input type="password" id="loginPassword" required>
+                                                <label>Password</label>
+                                            </div>
+                                            <div class="remember-forgot">
+                                                <label> <input type="checkbox"> Remember me</label>
+                                                <a href="#"> Forgot password ?</a>
+                                            </div>
+                                            <button type="submit" class="btn-lg" onclick="clearInputs('loginEmail', 'loginPassword')">Login</button>
+                                            <div class="login-register">
+                                                <p>Don't have an account? <a href="#" class="register-link">Register</a></p>
+                                            </div>
+                                        </form>
+                                    </div>
+                            
+                                    <div class="form-box register">
+                                        <h2>Registration</h2>
+                                        <form action="#">
+                                            <div class="input-box">
+                                                <span class="icon"><ion-icon name="person"></ion-icon></span>
+                                                <input type="text" id="registerUsername" required>
+                                                <label>Username</label>
+                                            </div>
+                                            <div class="input-box">
+                                                <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                                                <input type="email" id="registerEmail" required>
+                                                <label>Email</label>
+                                            </div>
+                                            <div class="input-box">
+                                                <span class="icon" id="toggleRegisterPassword" onclick="togglePasswordVisibility()"><ion-icon name="lock-closed"></ion-icon></span>
+                                                <input type="password" id="registerPassword" required>
+                                                <label>Password</label>
+                                            </div>
+                                            <div class="remember-forgot">
+                                                <label> <input type="checkbox"> I agree on the terms & conditions</label>
+                                            </div>
+                                            <button type="submit" class="btn-lg" onclick="clearInputs('registerUsername', 'registerEmail', 'registerPassword')">Register</button>
+                                            <div class="login-register">
+                                                <p>Already have an account? <a href="#" class="login-link">Login</a></p>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                              <script>
+                                function togglePasswordVisibility() {
+                                  var passwordInput = document.getElementById("passwordInput");
+                                  var icon = document.getElementById("togglePassword");
+                                
+                                  if (passwordInput.type === "password") {
+                                    passwordInput.type = "text";
+                                    icon.innerHTML = '<ion-icon name="lock-open-outline"></ion-icon>';
+                                  } else {
+                                    passwordInput.type = "password";
+                                    icon.innerHTML = '<ion-icon name="lock-closed-outline"></ion-icon>';
+                                  }
+                                }
+                                    const wrapper = document.querySelector('.wrapper');
+                                    const loginLink = document.querySelector('.login-link');
+                                    const registerLink = document.querySelector('.register-link');
+                                    const btnPopup = document.querySelector('.btnLogin-popup');
+                                    const iconClose = document.querySelector('.icon-closer');
+                                
+                                    registerLink.addEventListener('click', () => {
+                                        wrapper.classList.add('active');
+                                    });
+                                
+                                    loginLink.addEventListener('click', () => {
+                                        wrapper.classList.remove('active');
+                                    });
+                                
+                                    btnPopup.addEventListener('click', () => {
+                                        if (wrapper.classList.contains('active-popup')) {
+                                            // If 'active-popup' class is already present, remove it
+                                            wrapper.classList.remove('active-popup');
+                                        } else {
+                                            // If 'active-popup' class is not present, add it
+                                            wrapper.classList.add('active-popup');
+                                        }
+                                    });
+                                
+                                    iconClose.addEventListener('click', () => {
+                                    wrapper.classList.remove('active-popup');
+                                    clearInputs('loginEmail', 'loginPassword', 'registerUsername', 'registerEmail', 'registerPassword');
+                                });
+                                btnPopup.addEventListener('click', () => {
+                                        if (wrapper.classList.contains('active-popup')) {
+                                            // If 'active-popup' class is already present, remove it
+                                    clearInputs('loginEmail', 'loginPassword', 'registerUsername', 'registerEmail', 'registerPassword');
+                                        }
+                                    });
+                                function togglePasswordVisibility() {
+                                    // Your existing password visibility toggle logic
+                                }
+            
+                                function clearInputs(...ids) {
+                                    // Clear the input values for the specified IDs
+                                    ids.forEach(id => {
+                                        const input = document.getElementById(id);
+                                        if (input) {
+                                            input.value = '';
+                                        }
+                                    });
+                                }
+                                </script>
+                              <!-- LOGIN End -->
 
     <!-- Optional JavaScript -->
     <script src="js/icons/all.js"></script>
     <script src="js/main.js"></script>
+
         <!--
         Custom JS Link
     -->
-    <script src="./assets/js/scripts.js"></script>
 
     <!--
         Ion-icon JS Links
@@ -900,7 +1138,10 @@
             <script src="../lib/owlcarousel/owl.carousel.min.js"></script>
     
             <!-- Template Javascript -->
-            <script src="../js/main.js"></script>
+            <script src="../js/main.js"></script>   
+            <script src="js/index.js"></script>
+            <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+            <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>

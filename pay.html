@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>MEDINA BURGER</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+
+        <link href="img/hero-banner.png" rel="icon">
+        <link href="img/hero-banner.png" rel="apple-touch-icoun">
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playball&display=swap" rel="stylesheet">
+
+        <!-- Icon Font Stylesheet -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <!-- Libraries Stylesheet -->
+        <link href="lib/animate/animate.min.css" rel="stylesheet">
+        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/owl.carousel.min.css" rel="stylesheet">
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/bootstrap.min.css" rel="stylesheet"> 
+
+        <!-- Template Stylesheet -->
+        <link href="css/pay.css" rel="stylesheet">
+
+    </head>
+
+    <body>
+
+        <!-- Spinner Start -->
+        <div id="spinner" class="show w-100 vh-100 bg-white position-fixed translate-middle top-50 start-50  d-flex align-items-center justify-content-center">
+            <div class="spinner-grow text-primary" role="status"></div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Navbar start -->
+        <div class="container-fluid nav-bar">
+            <div class="container">
+                <nav class="navbar navbar-light navbar-expand-lg py-4">
+                    <a href="index.html" class="navbar-brand">
+                       <img src="img/logo6.jpg" alt="">
+                    </a>
+                    <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                        <span class="fa fa-bars text-primary"></span>
+                    </button>
+                    <div class="collapse navbar-collapse main-nav" id="navbarCollapse">
+                        <div class="navbar-nav mx-auto">
+                          <a href="index.html" class="nav-item nav-link">Thuis</a>
+                                <a href="menu/menu.html" class="nav-link">Onze menukaart</a>
+                            <a href="menu/menu.html" class="nav-item nav-link nav-special">Onze menukaart</a>
+                            <a href="#" class="nav-item nav-link">exclusieve aanbiedingen</a>
+                            <a href="#" class="nav-item nav-link">Over ons eten</a>
+                            <a href="event.html" class="nav-item nav-link">Plaats</a>
+                            <div class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><img src="img/du.jpg" alt="" style="width: 2rem;"> DU</a>
+                                <div class="dropdown-menu bg-light">
+                                    <a href="du.html" class="dropdown-item"><img src="img/uk.jpg" alt="" style="width: 2rem;"> Engels</a>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn-search btn btn-primary btn-md-square me-4 rounded-circle d-none d-lg-inline-flex" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fas fa-search"></i></button>
+                        <button type="button" class="btn btn-outline-warning btnLogin-popup">LOGIN</button>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!-- Navbar End -->
+
+
+        <!-- Modal Search Start -->
+        <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Search by keyword</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body d-flex align-items-center">
+                        <div class="input-group w-75 mx-auto d-flex">
+                            <input type="search" class="form-control bg-transparent p-3" placeholder="keywords" aria-describedby="search-icon-1">
+                            <span id="search-icon-1" class="input-group-text p-3"><i class="fa fa-search"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Search End -->
+
+         <!-- Modal Bestel nu Start -->
+         <div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Bestel nu by using one of our Delivery options</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body d-flex align-items-center">
+                        <div class="input-group w-75 mx-auto d-flex">
+                            <ul class="checkme">
+                                <li>
+                                  <input type="checkbox" id="myCheckbox1" value="1" name="fooby[1][]" required/>
+                                  <label for="myCheckbox1"> <img src="img/logo.png" alt=""></label>
+                                </li>
+                                <li>
+                              
+                                  <input type="checkbox" id="myCheckbox2" value="1" name="fooby[1][]" required/>
+                                  <label for="myCheckbox2"> <img src="img/delv1.png" alt=""></label>
+                                </li>
+                                <li>
+                              
+                                    <input type="checkbox" id="myCheckbox3" value="1" name="fooby[1][]" required/>
+                                    <label for="myCheckbox3"> <img src="img/delv3.png" alt=""></label>
+                                  </li>
+                              </ul>
+                        </div>
+                        <button class="btn btn-primary py-2 px-4 d-none d-xl-inline-block rounded-pill btn-option"  data-bs-dismiss="modal" style="background-color: rgb(242, 242, 242); margin-right: 15px;">Cancel</button>
+                        <button type="submit" class="btn btn-primary py-2 px-4 d-none d-xl-inline-block rounded-pill btn-option" data-bs-toggle="modal">Continue</button> &nbsp;&nbsp;
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Bestel nu End -->
+
+
+
+        <div class="container">
+            <div class="py-5 text-center">
+              
+              <h2>Checkout</h2>
+            </div>
+          
+            <div class="row">
+              <div class="col-md-4 order-md-2 mb-4">
+                <h4 class="d-flex justify-content-between align-items-center mb-3">
+                  <span class="text-muted">Your cart</span>
+                  <span class="badge badge-secondary badge-pill">3</span>
+                </h4>
+                <ul class="list-group mb-3">
+                  <li class="list-group-item d-flex justify-content-between lh-condensed">
+                    <div>
+                      <h6 class="my-0">Product name</h6>
+                      <small class="text-muted">Qty : <span>2</span></small>
+                    </div>
+                    <span class="text-muted">Total : $ <span class="product-price">5</span></span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between lh-condensed">
+                    <div>
+                      <h6 class="my-0">Second product</h6>
+                      <small class="text-muted">Qty : <span>2</span></small>
+                    </div>
+                    <span class="text-muted">Total : $ <span class="product-price">5</span></span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between lh-condensed">
+                    <div>
+                      <h6 class="my-0">Third item</h6>
+                      <small class="text-muted">Qty : <span>2</span></small>
+                    </div>
+                    <span class="text-muted">Total : $ <span class="product-price">5</span></span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between bg-light">
+                    <div class="text-success">
+                      <h6 class="my-0">Promo code :</h6>
+                      <small><span id="coupon-show"></span></small>
+                    </div>
+                    <span class="text-success">-$5</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between">
+                    <span>Total price : </span>
+                    <strong>$ <span id="totalPrd">0.00</span></strong>
+                  </li>
+                </ul>
+          
+                <form class="card p-2">
+                  <div class="input-group">
+                    <label for="couponCode"></label>
+                    <input type="text" class="form-control" placeholder="Promo code" id="couponCode">
+                    <div class="input-group-append">
+                      <button type="submit" class="btn btn-secondary" onclick="return redeemCoupon()">Redeem</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+
+              <script>
+                // Track redeemed coupon codes
+                var redeemedCouponCodes = [];
+              
+                // Calculate total price on page load
+                document.addEventListener('DOMContentLoaded', function() {
+                  calculateTotalPrice();
+                  loadSavedInformation();
+                });
+              
+                // Calculate total price based on product prices
+                function calculateTotalPrice() {
+                  var totalSpan = document.getElementById('totalPrd');
+                  var productPrices = document.querySelectorAll('.product-price');
+                  var totalPrice = 0;
+              
+                  // Iterate through product prices and calculate total
+                  productPrices.forEach(function(productSpan) {
+                    var productPrice = parseFloat(productSpan.innerText);
+                    totalPrice += productPrice;
+                  });
+              
+                  // Update total price span
+                  totalSpan.innerText = totalPrice.toFixed(2);
+                }
+              
+                // Redeem coupon code and update total price
+                function redeemCoupon() {
+                  var couponCodeInput = document.getElementById('couponCode');
+                  var couponCode = couponCodeInput.value.toUpperCase(); // Convert to uppercase for case-insensitive comparison
+                  var validCouponCodes = ["FFFGGHH", "SODEVTRW"];
+                  var totalSpan = document.getElementById('totalPrd');
+                  var totalPrice = parseFloat(totalSpan.innerText);
+              
+                  // Check if the entered coupon code is valid and has not been redeemed before
+                  if (validCouponCodes.includes(couponCode) && !redeemedCouponCodes.includes(couponCode)) {
+                    // Subtract $5 discount from the total price
+                    totalPrice -= 5;
+              
+                    // Ensure the total does not go below zero
+                    totalPrice = Math.max(0, totalPrice);
+              
+                    // Update total price span
+                    totalSpan.innerText = totalPrice.toFixed(2);
+              
+                    // Mark the coupon code as redeemed
+                    redeemedCouponCodes.push(couponCode);
+
+                    var couponShowSpan = document.getElementById('coupon-show');
+                    couponShowSpan.innerText = " " + couponCode;
+
+              
+                    // Show the alert after updating the total
+                    alert('Coupon code applied successfully!');
+
+                    // Disable the coupon code input and change cursor style
+                    couponCodeInput.disabled = true;
+                    couponCodeInput.classList.add('not-allowed');
+                    } else if (redeemedCouponCodes.includes(couponCode)) {
+                    // Display message if the coupon code has already been used
+                    alert('This coupon code has already been used. Please try a new one.');
+                    } else {
+                    // Display message for invalid coupon code
+                    alert('Invalid coupon code. Please try again.');
+                    }
+
+                  // Clear the coupon code input
+                  couponCodeInput.value = '';
+              
+                  // Prevent form submission and page refresh
+                  return false;
+                }
+              </script>
+
+
+              <div class="col-md-8 order-md-1">
+                <h4 class="mb-3">Billing address</h4>
+                <form class="needs-validation" novalidate id="checkoutForm" onsubmit="return validateForm()">
+                  <div class="row">
+                    <div class="col-md-6 mb-3">
+                      <label for="firstName">First name</label>
+                      <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                      <div class="invalid-feedback">
+                        Valid first name is required.
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                      <label for="lastName">Last name</label>
+                      <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+                      <div class="invalid-feedback">
+                        Valid last name is required.
+                      </div>
+                    </div>
+                  </div>
+          
+                  <div class="mb-3">
+                    <label for="username">Username</label>
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text">@</span>
+                      </div>
+                      <input type="text" class="form-control" id="username" placeholder="Username" required>
+                      <div class="invalid-feedback" style="width: 100%;">
+                        Your username is required.
+                      </div>
+                    </div>
+                  </div>
+          
+                  <div class="mb-3">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="you@example.com" required>
+                    <div class="invalid-feedback">
+                      Please enter a valid email address for shipping updates.
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-6 mb-3">
+                      <label for="number">Number</label>
+                      <input type="text" class="form-control" id="number" placeholder="+33 " value="" required>
+                      <div class="invalid-feedback">
+                        Valid Number is required.
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                      <label for="secNumber">Second Number <span class="text-muted">(Optional)</span></label>
+                      <input type="text" class="form-control" id="secNumber" placeholder="+33 " value="">
+                      <div class="invalid-feedback">
+                        Valid Number is required.
+                      </div>
+                    </div>
+                  </div>
+          
+                  <div class="mb-3">
+                    <label for="address">Address</label>
+                    <input type="text" class="form-control" id="address" placeholder="1234 Main St" required>
+                    <div class="invalid-feedback">
+                      Please enter your shipping address.
+                    </div>
+                  </div>
+          
+                  <div class="mb-3">
+                    <label for="address2">Address 2 <span class="text-muted">(Optional)</span></label>
+                    <input type="text" class="form-control" id="address2" placeholder="Apartment or suite">
+                  </div>
+          
+                  <div class="row">
+                    <div class="col-md-5 mb-3">
+                      <label for="country">Country</label>
+                      <select class="custom-select d-block w-100" id="country" required>
+                        <option value="">Choose...</option>
+                        <option>Belgium</option>
+                      </select>
+                      <div class="invalid-feedback">
+                        Please select a valid country.
+                      </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                      <label for="state">State</label>
+                      <select class="custom-select d-block w-100" id="state" required>
+                        <option value="">Choose...</option>
+                        <option>Antwerpen</option>
+                      </select>
+                      <div class="invalid-feedback">
+                        Please provide a valid state.
+                      </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                      <label for="zip">Zip</label>
+                      <input type="text" class="form-control" id="zip" placeholder="Ex : 2000" required>
+                      <div class="invalid-feedback">
+                        Zip code required.
+                      </div>
+                    </div>
+                  </div>
+                  <hr class="mb-4">
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="shipping-address">
+                    <label class="custom-control-label" for="shipping-address">Shipping address is the same as my billing address</label>
+                  </div>
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="save-info" onchange="saveInformation()">
+                    <label class="custom-control-label" for="save-info">Save this information for next time</label>
+                  </div>
+                  <hr class="mb-4">
+          
+                  <h4 class="mb-3">Payment</h4>
+          
+                  <div class="d-block my-3" style="display: flex !important;">
+                    <div class="custom-control custom-radio" style="padding-right: 25px;">
+                        <input id="payAtDelivery" name="paymentMethod" type="radio" class="custom-control-input" onclick="handlePaymentMethodChange('payAtDelivery')" required>
+                        <label class="custom-control-label" for="payAtDelivery">At delivery</label>
+                      </div>
+                    <div class="custom-control custom-radio">
+                      <input id="payByCard" name="paymentMethod" type="radio" class="custom-control-input" onclick="handlePaymentMethodChange('payByCard')" required>
+                      <label class="custom-control-label" for="payByCard">Credit card</label>
+                    </div>
+                  </div>
+                  <div class="card-details">
+                  <div class="row">
+                    <div class="col-md-6 mb-3">
+                      <label for="cc-name">Name on card</label>
+                      <input type="text" class="form-control" id="cc-name" placeholder="" title="Please enter your full name" required>
+                      <small class="text-muted">Full name as displayed on card</small>
+                      <div class="invalid-feedback">
+                        Name on card is required
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                      <label for="cardNumber">Credit card number</label>
+                      <input type="text" class="form-control" id="cardNumber" placeholder="" pattern="\d{4}-\d{4}-\d{4}-\d{4}" title="Please enter a valid 16-digit card number" maxlength="19" required>
+                      <div class="invalid-feedback">
+                        Credit card number is required
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-3 mb-3">
+                      <label for="expiryDate">Expiration</label>
+                      <input type="text" class="form-control" id="expiryDate" placeholder="" pattern="\d{2}/\d{2}" title="Please enter a valid expiry date (MM/YY)" maxlength="5" required>
+                      <div class="invalid-feedback">
+                        Expiration date required
+                      </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                      <label for="cvv">CVV</label>
+                      <input type="text" class="form-control" id="cvv" placeholder="" pattern="\d{3}" title="Please enter a valid 3-digit CVV" maxlength="3" required>
+                      <div class="invalid-feedback">
+                        Security code required
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                    <div class="delivery-options">
+                        <div class="row">
+                        <div>
+                            <!-- <label for="medinaB">MedinaB</label>
+                            <input type="radio" id="medinaB" name="deliveryOption" onclick="handleImageSelection('medinaB')"> -->
+                            <div class="delivery-images col-md-6 mb-3">
+                                <img src="img/logo.png" alt="Option 1" data-value="1" onclick="handleImageSelection('medinaB', this)">
+                                <div class="invalid-feedback" style="display: none;">
+                                  Please select one of delivery options.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <!-- <label for="uberEats">UberEats</label>
+                            <input type="radio" id="uberEats" name="deliveryOption" onclick="handleImageSelection('uberEats')"> -->
+                            <div class="delivery-images col-md-6 mb-3">
+                                <img src="img/delv1.png" alt="Option 2" data-value="2" onclick="handleImageSelection('uberEats', this)">
+                                <div class="invalid-feedback" style="display: none;">
+                                  Please select one of delivery options.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <!-- <label for="justEat">JustEat</label>
+                            <input type="radio" id="justEat" name="deliveryOption" onclick="handleImageSelection('justEat')"> -->
+                            <div class="delivery-images col-md-6 mb-3">
+                                <img src="img/delv3.png" alt="Option 3" data-value="3" onclick="handleImageSelection('justEat', this)">
+                                <div class="invalid-feedback" style="display: none;">
+                                  Please select one of delivery options.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                        <br>
+                    </div>
+
+                    <hr class="mb-4">
+                    <button class="btn btn-primary btn-lg btn-block" type="submit">Continue to buy</button>
+                    <p id="errorMessage" style="color: red; display: none;">Please check at least one payment method and ensure valid card details.</p>
+                    
+                    <script>
+                      // Add event listener to format card number input
+                      document.getElementById('cardNumber').addEventListener('input', function (event) {
+                          var cardNumberInput = event.target;
+                          var cardNumberValue = cardNumberInput.value.replace(/-/g, ''); // Remove existing hyphens
+                          var formattedCardNumber = formatCardNumber(cardNumberValue);
+                          cardNumberInput.value = formattedCardNumber;
+                      });
+              
+                      // Function to format card number with hyphens
+                      function formatCardNumber(cardNumber) {
+                          var formattedNumber = '';
+                          for (var i = 0; i < cardNumber.length; i++) {
+                              if (i > 0 && i % 4 === 0) {
+                                  formattedNumber += '-';
+                              }
+                              formattedNumber += cardNumber[i];
+                          }
+                          return formattedNumber;
+                      }
+              
+                      // Add event listener to add "/" after the first two digits in the expiry date
+                      document.getElementById('expiryDate').addEventListener('input', function (event) {
+                          var expiryDateInput = event.target;
+                          var expiryDateValue = expiryDateInput.value.replace(/\//g, ''); // Remove existing slashes
+                          var formattedExpiryDate = formatExpiryDate(expiryDateValue);
+                          expiryDateInput.value = formattedExpiryDate;
+                      });
+              
+                      // Function to format expiry date with "/"
+                      function formatExpiryDate(expiryDate) {
+                          if (expiryDate.length >= 2) {
+                              return expiryDate.substr(0, 2) + '/' + expiryDate.substr(2);
+                          }
+                          return expiryDate;
+                      }
+                      function validateForm() {
+                        var form = document.getElementById('checkoutForm');
+                        var errorMessage = document.getElementById('errorMessage');
+
+                        // Reset all error messages
+                        var invalidFeedbacks = form.querySelectorAll('.invalid-feedback');
+                        invalidFeedbacks.forEach(function(feedback) {
+                          feedback.style.display = 'none';
+                        });
+
+                        // Validate all required fields in the form
+                        var isValid = true;
+                        for (var i = 0; i < form.elements.length; i++) {
+                          var element = form.elements[i];
+
+                          if (element.required && element.value.trim() === '') {
+                            var feedback = element.parentElement.querySelector('.invalid-feedback');
+                            feedback.style.display = 'block';
+                            isValid = false;
+                          }
+                        }
+
+                    var payAtDeliveryCheckbox = document.getElementById('payAtDelivery');
+                    var payByCardCheckbox = document.getElementById('payByCard');
+                    var cardNumberInput = document.getElementById('cardNumber');
+                    var expiryDateInput = document.getElementById('expiryDate');
+                    var cvvInput = document.getElementById('cvv');
+                    var errorMessage = document.getElementById('errorMessage');
+        
+                    if ((!payAtDeliveryCheckbox.checked && !payByCardCheckbox.checked) ||
+                        (payByCardCheckbox.checked &&
+                            (!isValidCardNumber(cardNumberInput.value) ||
+                            !isValidExpiryDate(expiryDateInput.value) ||
+                            !isValidCVV(cvvInput.value)))) {
+                        errorMessage.style.display = 'block';
+                        return false; // Prevent form submission
+                    } else {
+                        errorMessage.style.display = 'none';
+                        return true; // Allow form submission
+                    }
+                    if ((!payAtDeliveryCheckbox.checked && !payByCardCheckbox.checked) ||
+                      (payAtDeliveryCheckbox.checked && !isDeliveryOptionSelected())) {
+                      errorMessage.style.display = 'block';
+                      isValid = false;
+                    } else {
+                      errorMessage.style.display = 'none';
+                    }
+
+                    return isValid;
+                  }
+
+
+            
+                    function isValidCardNumber(cardNumber) {
+                        return /^\d{4}-\d{4}-\d{4}-\d{4}$/.test(cardNumber);
+                    }
+            
+                    function isValidExpiryDate(expiryDate) {
+                        return /^\d{2}\/\d{2}$/.test(expiryDate);
+                    }
+            
+                    function isValidCVV(cvv) {
+                        return /^\d{3}$/.test(cvv);
+                    }
+                    function isDeliveryOptionSelected() {
+                    var deliveryOptions = document.querySelectorAll('.delivery-images img');
+                    for (var i = 0; i < deliveryOptions.length; i++) {
+                      var option = deliveryOptions[i];
+                      var feedback = option.parentElement.querySelector('.invalid-feedback');
+                      if (option.classList.contains('selected')) {
+                        feedback.style.display = 'none';
+                        return true;
+                      } else {
+                        feedback.style.display = 'block';
+                      }
+                    }
+                    return false;
+                  }
+                   // Save information when the checkbox is checked
+                   function saveInformation() {
+                    var saveInfoCheckbox = document.getElementById('save-info');
+
+                    if (saveInfoCheckbox.checked) {
+                      var formInputs = document.querySelectorAll('#checkoutForm input');
+                      var savedInformation = {};
+
+                      // Save form input values to localStorage
+                      formInputs.forEach(function(input) {
+                        savedInformation[input.id] = input.value;
+                      });
+
+                      localStorage.setItem('savedInformation', JSON.stringify(savedInformation));
+                    } else {
+                      // Clear saved information if the checkbox is unchecked
+                      localStorage.removeItem('savedInformation');
+
+                      // Clear form input values
+                      var formInputs = document.querySelectorAll('#checkoutForm input');
+                      formInputs.forEach(function(input) {
+                        input.value = '';
+                      });
+                    }
+                  }
+
+                  // Load saved information on page load
+                  function loadSavedInformation() {
+                    var savedInformation = localStorage.getItem('savedInformation');
+                    var formInputs = document.querySelectorAll('#checkoutForm input');
+
+                    if (savedInformation) {
+                      savedInformation = JSON.parse(savedInformation);
+
+                      // Set form input values from saved information
+                      formInputs.forEach(function(input) {
+                        if (savedInformation.hasOwnProperty(input.id)) {
+                          input.value = savedInformation[input.id];
+                        }
+                      });
+                    }
+                  }
+                  </script>
+                    </form>
+             </div>
+             </div>
+                    <script>
+                    function handlePaymentMethodChange(method) {
+                        var payAtDeliveryCheckbox = document.getElementById('payAtDelivery');
+                        var deliveryOptions = document.querySelector('.delivery-options');
+                        var cardDetails = document.querySelector('.card-details');
+                        var deliveryImages = document.querySelectorAll('.delivery-images');
+
+                        // Uncheck the "Pay by Card" radio button when "Pay at Delivery" is checked
+                        var payByCardRadioButton = document.getElementById('payByCard');
+                        if (method === 'payAtDelivery' && payAtDeliveryCheckbox.checked) {
+                            payByCardRadioButton.checked = false;
+                        }
+
+                        if (method === 'payAtDelivery') {
+                            // If "Pay at Delivery" is checked, show delivery options, hide card details, and show delivery images
+                            deliveryOptions.style.display = 'block';
+                            cardDetails.style.display = 'none';
+                            deliveryImages.forEach(imageContainer => {
+                                imageContainer.style.display = 'block';
+                            });
+                        } else if (method === 'payByCard') {
+                            // If "Pay by Card" is checked, show card details, hide delivery options, and hide delivery images
+                            cardDetails.style.display = 'block';
+                            deliveryOptions.style.display = 'none';
+                            deliveryImages.forEach(imageContainer => {
+                                imageContainer.style.display = 'none';
+                            });
+                        } else {
+                            // If no payment method is selected, hide everything
+                            deliveryOptions.style.display = 'none';
+                            cardDetails.style.display = 'none';
+                            deliveryImages.forEach(imageContainer => {
+                                imageContainer.style.display = 'none';
+                            });
+                        }
+                    }
+
+                    function handleImageSelection(selectedImageId, clickedImage) {
+                        // Check if the clicked image is already selected
+                        const isSelected = clickedImage.classList.contains('selected-image');
+
+                        // Reset styles for all images
+                        document.querySelectorAll('.delivery-images img').forEach(image => {
+                            image.classList.remove('selected-image');
+                        });
+
+                        // If the clicked image was not selected, apply styles
+                        if (!isSelected) {
+                            clickedImage.classList.add('selected-image');
+                        }
+
+                        // Implement additional logic as needed
+                        console.log(`Selected image: ${selectedImageId}`);
+                    }
+
+                  </script>
+          <div>      
+        <!-- Footer Start -->
+        <div class="container-fluid footer py-6 my-6 mb-0 bg-light" data-wow-delay="0.1s">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-item">
+                            <img src="img/logo6.jpg" alt="">
+                            <p class="lh-lg mb-4">Welkom bij Medina Burger in Antwerpen! Ervaar een mix van traditie en moderniteit in onze levendige, rijke culinaire ambiance.</p>
+                            <div class="footer-icon d-flex">
+                                <a class="btn btn-primary btn-sm-square me-2 rounded-circle" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-primary btn-sm-square me-2 rounded-circle" href=""><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="btn btn-primary btn-sm-square me-2 rounded-circle"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="btn btn-primary btn-sm-square me-2 rounded-circle"><i class="fab fa-youtube"></i></a>
+                                <a href="#" class="btn btn-primary btn-sm-square rounded-circle"><i class="fa fa-phone" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-item">
+                            <h4 class="mb-4">Speciale faciliteiten</h4>
+                            <div class="d-flex flex-column align-items-start">
+                                <a class="text-body mb-3" href=""><i class="fa fa-check text-primary me-2"></i>Onze menukaart</a>
+                                <a class="text-body mb-3" href=""><i class="fa fa-check text-primary me-2"></i>exclusieve aanbiedingen</a>
+                                <a class="text-body mb-3" href=""><i class="fa fa-check text-primary me-2"></i>Over ons eten</a>
+                                <a class="text-body mb-3" href=""><i class="fa fa-check text-primary me-2"></i>Our Plaats</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-item">
+                            <h4 class="mb-4">Contacteer ons nu</h4>
+                            <div class="d-flex flex-column align-items-start">
+                                <p><i class="fa fa-map-marker-alt text-primary me-2"></i> Koningin Astridplein 11, 2018 Antwerpen, Belgium</p>
+                                <p><i class="fa fa-phone-alt text-primary me-2"></i> +32 3 234 01 11</p>
+                                <p><i class="fas fa-envelope text-primary me-2"></i> noreply@medinaburger.be</p>
+                                <p><i class="fa fa-clock text-primary me-2"></i>Maandag-Zondag :
+                                    <br>11:00 AM - 22:00 PM
+                                    
+                                    </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-item">
+                            <h4 class="mb-4">Sociale galerij</h4>
+                            <div class="row g-2">
+                                <div class="col-4">
+                                     <img src="img/foot1.jpg" class="img-fluid rounded-circle border border-primary p-2" alt="">
+                                </div>
+                                <div class="col-4">
+                                     <img src="img/foot2.jpg" class="img-fluid rounded-circle border border-primary p-2" alt="">
+                                </div>
+                                <div class="col-4">
+                                     <img src="img/foot3.jpg" class="img-fluid rounded-circle border border-primary p-2" alt="">
+                                </div>
+                                <div class="col-4">
+                                     <img src="img/foot6.jpg" class="img-fluid rounded-circle border border-primary p-2" alt="">
+                                </div>
+                                <div class="col-4">
+                                     <img src="img/foot5.jpg" class="img-fluid rounded-circle border border-primary p-2" alt="">
+                                </div>
+                                <div class="col-4">
+                                     <img src="img/foot4.jpg" class="img-fluid rounded-circle border border-primary p-2" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+
+        <!-- Copyright Start -->
+        <div class="container-fluid copyright bg-dark py-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        <span class="text-light"><a href="#"><i class="fas fa-copyright text-light me-2"></i><img src="img/logo8.png" alt="" style="width: 15rem;"></a>, All right reserved.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Copyright End -->
+</div>
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-md-square btn-primary rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>   
+
+            <!-- LOGIN Start -->
+            <div class="the-log">
+              <div class="wrapper">
+                  <span class="icon-closer" id="iconClose"><ion-icon name="close-outline"></ion-icon></span>
+                  <div class="form-box login">
+                      <h2>Login</h2>
+                      <form action="#">
+                          <div class="input-box">
+                              <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                              <input type="email" id="loginEmail" required>
+                              <label>Email</label>
+                          </div>
+                          <div class="input-box">
+                              <span class="icon" id="togglePassword" onclick="togglePasswordVisibility()"><ion-icon name="lock-closed"></ion-icon></span>
+                              <input type="password" id="loginPassword" required>
+                              <label>Password</label>
+                          </div>
+                          <div class="remember-forgot">
+                              <label> <input type="checkbox"> Remember me</label>
+                              <a href="#"> Forgot password ?</a>
+                          </div>
+                          <button type="submit" class="btn-lg" onclick="clearInputs('loginEmail', 'loginPassword')">Login</button>
+                          <div class="login-register">
+                              <p>Don't have an account? <a href="#" class="register-link">Register</a></p>
+                          </div>
+                      </form>
+                  </div>
+          
+                  <div class="form-box register">
+                      <h2>Registration</h2>
+                      <form action="#">
+                          <div class="input-box">
+                              <span class="icon"><ion-icon name="person"></ion-icon></span>
+                              <input type="text" id="registerUsername" required>
+                              <label>Username</label>
+                          </div>
+                          <div class="input-box">
+                              <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                              <input type="email" id="registerEmail" required>
+                              <label>Email</label>
+                          </div>
+                          <div class="input-box">
+                              <span class="icon" id="toggleRegisterPassword" onclick="togglePasswordVisibility()"><ion-icon name="lock-closed"></ion-icon></span>
+                              <input type="password" id="registerPassword" required>
+                              <label>Password</label>
+                          </div>
+                          <div class="remember-forgot">
+                              <label> <input type="checkbox"> I agree on the terms & conditions</label>
+                          </div>
+                          <button type="submit" class="btn-lg" onclick="clearInputs('registerUsername', 'registerEmail', 'registerPassword')">Register</button>
+                          <div class="login-register">
+                              <p>Already have an account? <a href="#" class="login-link">Login</a></p>
+                          </div>
+                      </form>
+                  </div>
+              </div>
+          </div>
+            <script>
+              function togglePasswordVisibility() {
+                var passwordInput = document.getElementById("passwordInput");
+                var icon = document.getElementById("togglePassword");
+              
+                if (passwordInput.type === "password") {
+                  passwordInput.type = "text";
+                  icon.innerHTML = '<ion-icon name="lock-open-outline"></ion-icon>';
+                } else {
+                  passwordInput.type = "password";
+                  icon.innerHTML = '<ion-icon name="lock-closed-outline"></ion-icon>';
+                }
+              }
+                  const wrapper = document.querySelector('.wrapper');
+                  const loginLink = document.querySelector('.login-link');
+                  const registerLink = document.querySelector('.register-link');
+                  const btnPopup = document.querySelector('.btnLogin-popup');
+                  const iconClose = document.querySelector('.icon-closer');
+              
+                  registerLink.addEventListener('click', () => {
+                      wrapper.classList.add('active');
+                  });
+              
+                  loginLink.addEventListener('click', () => {
+                      wrapper.classList.remove('active');
+                  });
+              
+                  btnPopup.addEventListener('click', () => {
+                      if (wrapper.classList.contains('active-popup')) {
+                          // If 'active-popup' class is already present, remove it
+                          wrapper.classList.remove('active-popup');
+                      } else {
+                          // If 'active-popup' class is not present, add it
+                          wrapper.classList.add('active-popup');
+                      }
+                  });
+              
+                  iconClose.addEventListener('click', () => {
+                  wrapper.classList.remove('active-popup');
+                  clearInputs('loginEmail', 'loginPassword', 'registerUsername', 'registerEmail', 'registerPassword');
+              });
+              btnPopup.addEventListener('click', () => {
+                      if (wrapper.classList.contains('active-popup')) {
+                          // If 'active-popup' class is already present, remove it
+                  clearInputs('loginEmail', 'loginPassword', 'registerUsername', 'registerEmail', 'registerPassword');
+                      }
+                  });
+              function togglePasswordVisibility() {
+                  // Your existing password visibility toggle logic
+              }
+
+              function clearInputs(...ids) {
+                  // Clear the input values for the specified IDs
+                  ids.forEach(id => {
+                      const input = document.getElementById(id);
+                      if (input) {
+                          input.value = '';
+                      }
+                  });
+              }
+              </script>
+            <!-- LOGIN End -->
+        <!-- JavaScript Libraries -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/wow/wow.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/counterup/counterup.min.js"></script>
+        <script src="lib/lightbox/js/lightbox.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    
+    
+    </body>
+</html>
